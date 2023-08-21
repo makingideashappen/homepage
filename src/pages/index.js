@@ -4,10 +4,10 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
-import {Process} from '../components/process'
-import {Benefits} from '../components/benefits'
+import { Process } from '../components/process'
+import { Benefits } from '../components/benefits'
 import Contact from '../components/contact'
-import {Portfolio} from '../components/portfolio'
+import { Portfolio } from '../components/portfolio'
 import Footer from '../components/footer'
 import Logo from "../images/logo.svg"
 
@@ -51,20 +51,6 @@ const samplePageLinks = [
   { text: "Inquiry", url: "contact" },
 ]
 
-const moreLinks = [
-  { text: "Words of wisdom", url: "https://gatsby.dev/discord" },
-  {
-    text: "Documentation",
-    url: "https://gatsbyjs.com/docs/",
-  },
-  {
-    text: "People to follow",
-    url: "https://gatsbyjs.com/starters/",
-  },
-
-]
-
-const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
 
 const IndexPage = () => (
   <Layout>
@@ -78,7 +64,7 @@ const IndexPage = () => (
         Welcome to <b>Making Ideas Happen</b>
       </h1>
       <p className={styles.intro}>
-        <b>Content:</b>{" "}
+        <b>Content: </b>
         {samplePageLinks.map((link, i) => (
           <React.Fragment key={link.url}>
             <Link style={{fontSize:"1.2rem"}} to={link.url}>{link.text}</Link>
@@ -93,7 +79,7 @@ const IndexPage = () => (
         <li key={link.url} className={styles.listItem}>
           <span
               style={{
-                background: "rgba(0, 0, 0, 0.95)",
+                background: "linear-gradient(45deg,blue,var(--color-primary))",
                 padding: "6px 0"
               }}
             ><a
@@ -116,11 +102,11 @@ const IndexPage = () => (
     <Benefits/>
     <Contact/>
     <a href={`services`}><b>Read more ↑</b></a>
-    <br/>    <br/>    <br/>
-    <a href={`/services`}>
+    <br/><br/><br/>
+    <a href={`/portfolio`}>
     <Portfolio/>
    </a>
-    <center> <code>More intersting updates soon</code> </center>
+    <center><code>More intersting updates soon</code></center>
     <Footer/>
   </Layout>
 )

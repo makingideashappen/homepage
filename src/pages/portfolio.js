@@ -1,11 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
-
 import Layout from "../components/layout"
-import Seo from "../components/seo"
-
 import { StaticImage } from "gatsby-plugin-image"
-
 
 const Portfolio = ( ) => {
   return (
@@ -16,7 +12,6 @@ const Portfolio = ( ) => {
       <h2>
         Sample of recent works
       </h2>
-      
       <h3>Mockups of websites</h3>
       <div>
       <StaticImage

@@ -20,11 +20,8 @@ justify-content:center;
 flex-direction:column;
 .profilePic1{
 }
-
 .profilePic2{
 }
-}
-
 `
 
 const SecondPage = () => {
@@ -34,9 +31,8 @@ const SecondPage = () => {
       <h2>A few words about author</h2>
       <Wrapper>
         <article>Hello I am professional with a technology background.
-        
           <p> My main interest are various, from broadly understood business
-          to IT and sales, product development,  housing industry and well-being.   </p>
+          to IT and sales, product development,  housing industry and well-being.</p>
           <br />
           <p>Recent years I have been working with my own company.</p>
           <p>  Before that was working on several professional projects.</p>
@@ -55,7 +51,6 @@ const SecondPage = () => {
             alt="profile"
             src={Profile2} />
         </div>
-
       </Wrapper>
       <br /><br />
       <Link to="/"> ← Return</Link>
