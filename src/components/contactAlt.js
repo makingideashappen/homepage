@@ -18,15 +18,15 @@ export function Contact() {
       // className={Section === "Contact" ? "transition-fade" : ""}
       >
         <Row>
-          <h2>Web development service for your next idea.</h2>{" "}
+          <h2>Web development service for your next idea.</h2>
         </Row>
       </div>
       <h3>
-        If you wish a{" "}
+        If you wish a 
         <span style={{ borderBottom: "2px solid black" }}>new website </span>,
-        or you are looking for{" "}
+        or you are looking for 
         <span style={{ borderBottom: "2px solid black" }}>
-          front-end developer for your project{" "}
+          front-end developer for your project 
         </span>
         , feel free to contact me.
         <br />
@@ -41,18 +41,17 @@ export function Contact() {
         </Column>
       </Row>
       {/* <div className="Gallery contact">
-        <figure className="Gallery--Item ">
+        <figure className="Gallery--Item">
           <div>
-            <img src={Homepage} alt="recruitment" />{" "}
+            <img src={Homepage} alt="recruitment" />
           </div>
           <Link className="container center" to="/contact/order-website">
-            {" "}
             <button className="shadow">I wish a website for my business</button>
           </Link>
         </figure>
-        <figure className="Gallery--Item ">
+        <figure className="Gallery--Item">
           <div>
-            <img src={recruitment} alt="recruitment" />{" "}
+            <img src={recruitment} alt="recruitment" />
           </div>
           <Link className="container center" to="/contact/recruitment">
             <button className="shadow">I am recruiter</button>
@@ -62,6 +61,7 @@ export function Contact() {
     </Wrapper>
   );
 }
+
 const Row = styled.div`
   width: 100%;
   display: flex;
