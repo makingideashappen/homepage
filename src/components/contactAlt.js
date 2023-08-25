@@ -26,7 +26,7 @@ export function Contact() {
         <span style={{ borderBottom: "2px solid black" }}>new website </span>,
         or you are looking for 
         <span style={{ borderBottom: "2px solid black" }}>
-          front-end developer for your project
+          front-end developer for your project 
         </span>
         , feel free to contact me.
         <br />
