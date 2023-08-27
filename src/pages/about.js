@@ -39,7 +39,6 @@ const SecondPage = () => {
           <br />
         </article>
         <div className="images">
-
           <img
             width="200px"
             alt="profile"
