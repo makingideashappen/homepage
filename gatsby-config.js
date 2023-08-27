@@ -4,7 +4,7 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
-  pathPrefix: "/",
+  pathPrefix: "/homepage",
   siteMetadata: {
     title: `Making Ideas Happen`,
     description: `Internet services consultancy`,
