@@ -28,7 +28,11 @@ const peopleToFollow = [
   }, {
     name: "Joe Rogan - sportsman, public speaker",
     link: "https://www.youtube.com/@joerogan"
-  }
+  }, 
+  // {
+  //   name: "Joe Rogan - sportsman, public speaker",
+  //   link: "https://www.youtube.com/@joerogan"
+  // }
 ]
 
 const NotFoundPage = () => (
