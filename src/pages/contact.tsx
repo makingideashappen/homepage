@@ -3,7 +3,7 @@ import * as React from "react"
 import { PageProps, Link, graphql, HeadFC } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import {Intro} from '../components/intro'
+import { Intro } from '../components/intro'
 import Form from "../components/form"
 
 type DataProps = {
@@ -17,9 +17,9 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({
   location,
 }) => (
   <Layout>
-    <Intro/>
+    <Intro />
     <Form />
- <br/><br/>
+    <br /><br />
     <Link to="/"> ← Return</Link>
   </Layout>
 )

@@ -5,6 +5,8 @@ import { Process } from '../components/process'
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { Intro } from '../components/intro'
+import Ishikawa from  "../images/ishikawa.png"
+
 type DataProps = {
   site: {
     buildTime: string
@@ -57,6 +59,10 @@ Problem to solution approach
   </li>
 </ul>
     <br></br>
+    <img style={{maxWidth:400}}  src={Ishikawa} />
+  <p><code>Pic 1. Ishikawa diagram</code></p> 
+  
+
     <Link to="/"> ← Return</Link>
   </Layout>
 )

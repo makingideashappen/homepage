@@ -43,7 +43,7 @@ const NotFoundPage = () => (
       {peopleToFollow.map(({name,link})=> <li key={name}><a target="_blank" rel="noreferrer" href={link}>{name}</a></li>)}
       </ul>
       <code>soon more interesting links</code>
-      <img style={{maxWidth:"10vw"}} src={Homepage} alt="recruitment" />{" "}
+      <img style={{maxWidth:"10vw"}} src={Homepage} alt="recruitment" />
   </Layout>
 )
 
