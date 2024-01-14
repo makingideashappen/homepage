@@ -48,6 +48,7 @@ const samplePageLinks = [
   },
   { text: "Services", url: "services" },
   { text: "Portfolio", url: "portfolio" },
+  { text: "Blog", url: "blog" },
   { text: "Inquiry", url: "contact" },
 
 ]

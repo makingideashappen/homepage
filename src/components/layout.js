@@ -39,7 +39,6 @@ const Layout = ({ children }) => {
             fontSize: `var(--font-sm)`,
           }}
         >
-       
         </footer>
       </div>
     </>
