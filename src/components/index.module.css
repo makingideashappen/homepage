@@ -49,11 +49,23 @@ color: var(--color-code-bg);
   margin-top: var(--space-1);
 }
 
-.textCenter {
-  text-align: center;
-}
-
 .intro {
   max-width: none;
   line-height: var(--line-height-loose);
+}
+
+.hero{
+  display: flex;
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
+}
+
+.decoration {
+margin:0 5vw;
+order: 1;
+}
+
+.info {
+
 }
