@@ -33,7 +33,6 @@ const SecondPage = () => {
         <article>
           Hello I am professional with a technology background.
           <p>
-            {" "}
             My main interest are various, from broadly understood business to IT
             and sales, product development, housing industry and well-being.
           </p>
