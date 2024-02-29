@@ -1,5 +1,3 @@
-
-
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
@@ -17,7 +15,7 @@ module.exports = {
       twitter: `kylemathews`,
     },
   },
-  
+
   plugins: [
     `gatsby-plugin-image`,
     {
@@ -66,9 +64,10 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/spinner.svg`, 
+        icon: `src/images/Spinner.svg`,
       },
-    },{
+    },
+    {
       resolve: `gatsby-plugin-feed`,
       options: {
         query: `
@@ -86,15 +85,15 @@ module.exports = {
         feeds: [
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.nodes.map(node => {
+              return allMarkdownRemark.nodes.map((node) => {
                 return Object.assign({}, node.frontmatter, {
                   description: node.excerpt,
                   date: node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + node.fields.slug,
                   guid: site.siteMetadata.siteUrl + node.fields.slug,
                   custom_elements: [{ "content:encoded": node.html }],
-                })
-              })
+                });
+              });
             },
             query: `{
               allMarkdownRemark(sort: {frontmatter: {date: DESC}}) {
@@ -116,6 +115,6 @@ module.exports = {
           },
         ],
       },
-    },  
+    },
   ],
-}
+};
