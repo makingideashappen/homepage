@@ -1,6 +1,7 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import React from "react";
 import styled from "styled-components";
+import { navigate } from "gatsby";
 
 const Wrap = styled.div`
   form {
@@ -38,20 +39,17 @@ const form = ({ className }) => {
         email: "",
         message: "",
       }}
-      onSubmit={(values, actions) => {
-        // fetch("/", {
-        //   method: "POST",
-        //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        //   body: encode({ "form-name": "contact-demo", ...values })
-        // })
-        //   .then(() => {
-        //     alert("Success");
-        //     actions.resetForm();
-        //   })
-        //   .catch(() => {
-        //     alert("Error");
-        //   })
-        //   .finally(() => actions.setSubmitting(false));
+      onSubmit={(event) => {
+        event.preventDefault();
+        const myForm = event.target;
+        const formData = new FormData(myForm);
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(formData).toString(),
+        })
+          .then(() => navigate("/"))
+          .catch((error) => alert(error));
       }}
       validate={(values) => {
         const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
@@ -69,7 +67,12 @@ const form = ({ className }) => {
       }}
     >
       {() => (
-        <Form className={className} name="contact-demo" data-netlify={true}>
+        <Form
+          className={className}
+          method="POST"
+          name="contact-demo"
+          data-netlify={true}
+        >
           <label htmlFor="name">1. Please let know who are you</label>
           <Field name="name" />
           <ErrorMessage name="name" />
