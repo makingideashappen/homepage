@@ -40,11 +40,7 @@ const form = ({ className }) => {
         message: "",
       }}
       onSubmit={(event) => {
-        console.log("sc");
-
-        // event.preventDefault();
         const myForm = event.target;
-        console.log(myForm);
         const formData = new FormData(myForm);
         fetch("/", {
           method: "POST",
@@ -74,7 +70,7 @@ const form = ({ className }) => {
           className={className}
           method="POST"
           name="contact-demo"
-          data-netlify={true}
+          data-netlify="true"
         >
           <label htmlFor="name">1. Please let know who are you</label>
           <Field name="name" />
