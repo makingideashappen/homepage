@@ -40,8 +40,11 @@ const form = ({ className }) => {
         message: "",
       }}
       onSubmit={(event) => {
-        event.preventDefault();
+        console.log("sc");
+
+        // event.preventDefault();
         const myForm = event.target;
+        console.log(myForm);
         const formData = new FormData(myForm);
         fetch("/", {
           method: "POST",
