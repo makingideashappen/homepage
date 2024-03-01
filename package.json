@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "Making Ideas Happen",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "A Welcome page on behalf of Kris K.",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Kris K. makingideashappen@protonmail.com>",
   "dependencies": {
     "formik": "^2.4.3",
     "gatsby": "^5.11.0",
@@ -41,12 +41,5 @@
     "deploy": "gatsby build && gh-pages -d public -b main",
     "deploy:ci": "gatsby build --prefix-paths && gh-pages -d public -r https://$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@github.com/makingideashappen/repo.git",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }

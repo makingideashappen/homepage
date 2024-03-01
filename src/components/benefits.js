@@ -37,8 +37,7 @@ export function Benefits() {
           <figcaption>UI/UX design</figcaption>
           <figcaption>
             <code>
-              {" "}
-              Video production company website with netlify cms integration{" "}
+              Video production company website with netlify cms integration
             </code>
           </figcaption>
         </figure>
@@ -49,7 +48,6 @@ export function Benefits() {
           <figcaption>Graphic design</figcaption>
           <figcaption>
             <code>
-              {" "}
               Creating a stunning and fast e-commerce sites with cms panel
               integration
             </code>

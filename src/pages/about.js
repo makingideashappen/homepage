@@ -3,7 +3,6 @@ import { Link } from "gatsby";
 
 import Layout from "../components/layout";
 import Seo from "../components/seo";
-import Profile1 from "../images/profile1.jpg";
 import Profile2 from "../images/profile2.jpg";
 import styled from "styled-components";
 
@@ -42,12 +41,6 @@ const SecondPage = () => {
           <br />
         </article>
         <div className="images">
-          {/* <img
-            width="200px"
-            alt="profile"
-            src={Profile1}
-            classname="profilePic1"
-          /> */}
           <img width="200px" alt="profile" src={Profile2} />
         </div>
       </Wrapper>

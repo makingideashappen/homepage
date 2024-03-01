@@ -13,13 +13,13 @@ export function Intro() {
           <h1
             style={{
               height: "auto",
-              color: "#f8f8f8"
+              color: "#f8f8f8",
             }}
           >
             <span
               style={{
                 background: "rgba(0, 0, 0, 0.95)",
-                padding: "6px 0"
+                padding: "6px 0",
               }}
             >
               Everything begins with an idea.
@@ -34,8 +34,9 @@ export function Intro() {
             alt="logo"
             style={{
               width: "240px",
+              height: "140px",
               marginTop: "auto",
-              marginLeft: "auto"
+              marginLeft: "auto",
             }}
           />
           {/* <div
@@ -65,7 +66,7 @@ const Row = styled.div`
 const Column = styled.div`
   display: flex;
   min-height: 100px;
-  width: ${props => (props.s ? props.s + "%" : "auto")};
+  width: ${(props) => (props.s ? props.s + "%" : "auto")};
 `;
 
 const Wrapper = styled.div`
