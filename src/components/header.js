@@ -5,14 +5,14 @@ import styled from "styled-components";
 import Logo from "../images/logo.svg";
 
 const StyledHeader = styled.header`
-  margin: 0 15vw;
   display: flex;
-  padding: var(--space-4) var(--size-gutter);
+  padding: var(--space-4) 15vw;
   align-items: center;
   justify-content: space-between;
   @media (max-width: 800px) {
     display: none;
   }
+  background: white;
 `;
 
 const Header = ({ siteTitle }) => (

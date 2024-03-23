@@ -14,7 +14,7 @@ import Man from "../images/man.svg";
 const links = [
   {
     text: "LinkedIn update",
-    url: "https://github.com/gatsbyjs/gatsby/tree/master/examples",
+    url: "https://www.linkedin.com/in/kris-krysiak-3aa83297/",
     description: "Proffesional network connection.",
   },
   {
@@ -45,7 +45,7 @@ const samplePageLinks = [
   },
   { text: "Services", url: "services" },
   { text: "Portfolio", url: "portfolio" },
-  { text: "Blog", url: "blog" },
+  // { text: "Blog", url: "blog" },
   { text: "Inquiry", url: "contact" },
 ];
 

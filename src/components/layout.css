@@ -42,6 +42,14 @@ body {
   font-weight: normal;
   margin: 0;
   word-wrap: break-word;
+  background: white;
+  background-image: radial-gradient(rgb(10, 10, 10) 1px, transparent 0);
+  background-size: 1.3rem 1.3rem;
+  background-position: -19px -19px;
+}
+main {
+  background: white;
+  padding:1rem;
 }
 a {
   background-color: transparent;
@@ -79,6 +87,7 @@ h1 {
   line-height: var(--line-height-dense);
   letter-spacing: -0.01em;
   line-height: 145%;
+  
 }
 h1 > b {
   color: var(--color-primary);
@@ -227,18 +236,3 @@ pre tt:after {
 }
 
 
-/* li::marker {
-  color: #2bc301;
-}
-
-li:nth-child(2n)::marker {
-  color: #159bf3;
-}
-
-li:nth-child(3n)::marker {
-  color: #8eb814;
-}
-
-li:nth-child(4n)::marker {
-  color: #335299;
-} */

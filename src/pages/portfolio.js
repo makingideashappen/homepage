@@ -44,6 +44,8 @@ const Portfolio = () => {
         <code>Soon to be updated</code>
         <h3>Paintings and handmade</h3>
         <code>Soon to be updated</code>
+        <h3>Private brands</h3>
+        <a href="/brands">Brands page for check</a>{" "}
       </p>
       <br />
       <br />

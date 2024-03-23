@@ -1,33 +1,40 @@
 import React from "react";
 import styled from "styled-components";
-import Chip from "../images/chip.png"
+import Chip from "../images/chip.png";
 
 export function Portfolio() {
   return (
     <Works>
       <Row>
         <Column s={20}>
-          <img 
-          alt="decoration"
-          style={{ maxHeight:100, marginTop:20, filter: "brightness(0) invert(1)", minWidth:100
-          }}
-          src={Chip}/>
+          <img
+            alt="decoration"
+            style={{
+              maxHeight: 100,
+              marginTop: 20,
+              filter: "brightness(0) invert(1)",
+              minWidth: 100,
+            }}
+            src={Chip}
+          />
         </Column>
         <Column s={80}>
           <h2
             style={{
               margin: "auto",
               color: "line",
-              padding:"1em",
+              padding: "1em",
               paddingLeft: 60,
             }}
           >
-          <span style={{textDecoration: "underline" }}> Recent projects </span>  
+            <span style={{ textDecoration: "underline" }}>
+              {" "}
+              Recent projects{" "}
+            </span>
           </h2>
         </Column>
       </Row>
-      <Row>  
-      </Row>
+      <Row></Row>
     </Works>
   );
 }
@@ -39,11 +46,11 @@ const Row = styled.div`
 `;
 
 const Column = styled.div`
-  padding-left:20px;
+  padding-left: 20px;
   display: flex;
   min-height: 100px;
-  width: ${props => (props.s ? props.s + "%" : "auto")};
-  color:white;
+  width: ${(props) => (props.s ? props.s + "%" : "auto")};
+  color: white;
 `;
 
 const Works = styled.div`
