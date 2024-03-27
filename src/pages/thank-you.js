@@ -27,6 +27,6 @@ const NotFoundPage = () => (
   </Layout>
 );
 
-export const Head = () => <Seo title="Brands" />;
+export const Head = () => <Seo title="Thank You" />;
 
 export default NotFoundPage;
