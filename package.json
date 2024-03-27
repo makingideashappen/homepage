@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "author": "Kris K. makingideashappen@protonmail.com>",
   "dependencies": {
-    "formik": "^2.4.3",
+    "axios": "^1.6.8",
     "gatsby": "^5.11.0",
     "gatsby-plugin-feed": "^5.13.0",
     "gatsby-plugin-image": "^3.11.0",

@@ -49,73 +49,76 @@ const samplePageLinks = [
   { text: "Inquiry", url: "contact" },
 ];
 
-const IndexPage = () => (
-  <Layout>
-    <div className={styles.hero}>
-      <div className={styles.decoration}>
-        <img width="200" alt="man" src={Man} />
+const IndexPage = () => {
+  return (
+    <Layout>
+      <div className={styles.hero}>
+        <div className={styles.decoration}>
+          <img width="200" alt="man" src={Man} />
+        </div>
+        <div className={styles.info}>
+          <h1>
+            Welcome to <b>Making Ideas Happen</b>
+          </h1>
+          <p className={styles.intro}>
+            <b>Content: </b>
+            {samplePageLinks.map((link, i) => (
+              <React.Fragment key={link.url}>
+                <Link style={{ fontSize: "1.2rem" }} to={link.url}>
+                  {link.text}
+                </Link>
+                {i !== samplePageLinks.length - 1 && <> · </>}
+              </React.Fragment>
+            ))}
+            <br />
+          </p>
+          <ul className={styles.list}>
+            {links.map((link) => (
+              <li key={link.url} className={styles.listItem}>
+                <span
+                  style={{
+                    background:
+                      "linear-gradient(45deg,blue,var(--color-primary))",
+                    padding: "6px 0",
+                  }}
+                >
+                  <a className={styles.listItemLink} href={`${link.url}`}>
+                    {link.text} ↑
+                  </a>
+                </span>
+                <p className={styles.listItemDescription}>{link.description}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
-      <div className={styles.info}>
-        <h1>
-          Welcome to <b>Making Ideas Happen</b>
-        </h1>
-        <p className={styles.intro}>
-          <b>Content: </b>
-          {samplePageLinks.map((link, i) => (
-            <React.Fragment key={link.url}>
-              <Link style={{ fontSize: "1.2rem" }} to={link.url}>
-                {link.text}
-              </Link>
-              {i !== samplePageLinks.length - 1 && <> · </>}
-            </React.Fragment>
-          ))}
-          <br />
-        </p>
-        <ul className={styles.list}>
-          {links.map((link) => (
-            <li key={link.url} className={styles.listItem}>
-              <span
-                style={{
-                  background:
-                    "linear-gradient(45deg,blue,var(--color-primary))",
-                  padding: "6px 0",
-                }}
-              >
-                <a className={styles.listItemLink} href={`${link.url}`}>
-                  {link.text} ↑
-                </a>
-              </span>
-              <p className={styles.listItemDescription}>{link.description}</p>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </div>
 
-    {/* {moreLinks.map((link, i) => (
+      {/* {moreLinks.map((link, i) => (
       <React.Fragment key={link.url}>
         <a href={`${link.url}${utmParameters}`}>{link.text}</a>
         {i !== moreLinks.length - 1 && <> · </>}
       </React.Fragment>
     ))} */}
-    <Process />
-    <Benefits />
-    <Contact />
-    <a href={`services`}>
-      <b>Read more ↑</b>
-    </a>
-    <br />
-    <br />
-    <br />
-    <a href={`/portfolio`}>
-      <Portfolio />
-    </a>
-    <center>
-      <code>More intersting updates soon</code>
-    </center>
-    <Footer />
-  </Layout>
-);
+
+      <Process />
+      <Benefits />
+      <Contact />
+      <a href={`services`}>
+        <b>Read more ↑</b>
+      </a>
+      <br />
+      <br />
+      <br />
+      <a href={`/portfolio`}>
+        <Portfolio />
+      </a>
+      <center>
+        <code>More intersting updates soon</code>
+      </center>
+      <Footer />
+    </Layout>
+  );
+};
 
 export const Head = () => <Seo title="Home" />;
 

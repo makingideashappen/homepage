@@ -49,7 +49,7 @@ export default function Foooter() {
             <span> </span> LinkedIn
           </a>
         </dd>
-        <dd>
+        {/* <dd>
           <a
             href="https://github.com/krs2000"
             target="_blank"
@@ -60,7 +60,7 @@ export default function Foooter() {
           >
             <span className="label"> GitHub</span>
           </a>
-        </dd>
+        </dd> */}
         <dd>
           <a
             href="https://www.youtube.com/@makin_ideas_happen"

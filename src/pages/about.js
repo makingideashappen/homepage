@@ -38,10 +38,8 @@ const Wrapper = styled.div`
 
   .avatar {
     float: left;
-    width: 150px;
+    width: 200px;
     border: 15px solid transparent;
-    border-radius: 100%;
-    shape-outside: content-box;
     shape-margin: 1rem;
     margin-left: -15px;
   }
@@ -54,25 +52,23 @@ const SecondPage = () => {
       <h2>A few words about author</h2>
       <Wrapper>
         <div class="content">
-          <h3>Kris K.</h3>
-          <img
-            className="avatar"
-            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/19085/round-avatar.png"
-            alt="Avatar"
-          />
-          <p> Hello I am professional with a technology background.</p>
+          <img className="avatar" src={Profile2} alt="Avatar" />
           <p>
-            My main interest are various, from broadly understood business to IT
-            and sales, product development, housing industry and well-being.
+            Meet Kris, a professional with a business management, technology
+            background.
           </p>
-
-          <p>Recent years I have been working with my own company</p>
-
-          <p>Before that was working on several professional projects.</p>
+          <p>
+            He used to work with <b>IT, sales and product development</b>.
+            Recent years has been working with own company.{" "}
+          </p>
+          <p>
+            Before that was working on several professional projects. The main
+            purpose of this webpage is to find a potential partner or employer.
+          </p>
         </div>
       </Wrapper>
-      <br />
-      <br />
+      <br /> <br />
+      <p></p>
       <Link to="/"> ← Return</Link>
     </Layout>
   );

@@ -1,6 +1,6 @@
-import { Formik, Form, Field, ErrorMessage } from "formik";
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import axios from "axios";
 import { navigate } from "gatsby";
 
 const Wrap = styled.div`
@@ -12,6 +12,7 @@ const Wrap = styled.div`
     margin: 12px 0;
   }
   button {
+    position: relative; /* Position relative for absolute positioning of loader */
     width: 120px;
     height: 48px;
     background: rgba(0, 0, 0, 0.95);
@@ -20,75 +21,124 @@ const Wrap = styled.div`
     font-size: 1em;
     font-weight: bold;
   }
-  textarea {
-    min-height: 200px;
-    border-radius: 0.2233rem;
-    border: 1px solid black;
+  button.loading {
+    cursor: not-allowed; /* Prevent clicking when loading */
   }
+  button.loading:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  button.loading > * {
+    display: inline-block;
+  }
+  button.loading > svg {
+    animation: spin 0.6s linear infinite; /* Animation for spinner */
+  }
+  @keyframes spin {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  textarea,
   input {
-    border: 1px solid black;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: monospace;
     border-radius: 0.2233rem;
+    border: 1.5px solid black;
+    transition: border-color 0.3s ease; /* Add transition for smoother effect */
+    margin-bottom: 1rem;
+    padding: 1.2rem;
+  }
+  input.error,
+  textarea.error {
+    border-color: red; /* Change border color to red for error state */
   }
 `;
 
-const form = ({ className }) => {
+const EmailForm = () => {
+  const [emailData, setEmailData] = useState({
+    from: "",
+    subject: "",
+    message: "",
+  });
+  const [errorFields, setErrorFields] = useState({});
+  const [loading, setLoading] = useState(false); // State to track loading
+
+  const handleChange = (e) => {
+    setEmailData({ ...emailData, [e.target.name]: e.target.value });
+    setErrorFields({ ...errorFields, [e.target.name]: false }); // Clear error when user starts typing
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const errors = {};
+    if (!emailData.from) {
+      errors.from = true;
+    }
+    if (!emailData.subject) {
+      errors.subject = true;
+    }
+    if (!emailData.message) {
+      errors.message = true;
+    }
+    if (Object.keys(errors).length > 0) {
+      setErrorFields(errors);
+      return; // Don't submit form if there are errors
+    }
+    try {
+      setLoading(true); // Start loading
+      await axios.post(
+        "https://homepage-api.onrender.com/send-email",
+        emailData
+      );
+      navigate("/thank-you");
+    } catch (error) {
+      console.error("Error sending email:", error);
+      alert("Failed to send email");
+    } finally {
+      setLoading(false); // Stop loading
+    }
+  };
+
   return (
-    <Formik
-      initialValues={{
-        name: "",
-        email: "",
-        message: "",
-      }}
-      onSubmit={(event) => {
-        const myForm = event.target;
-        const formData = new FormData(myForm);
-        fetch("/", {
-          method: "POST",
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: new URLSearchParams(formData).toString(),
-        })
-          .then(() => navigate("/"))
-          .catch((error) => alert(error));
-      }}
-      validate={(values) => {
-        const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
-        const errors = {};
-        if (!values.name) {
-          errors.name = "Name failure";
-        }
-        if (!values.email || !emailRegex.test(values.email)) {
-          errors.email = "Email failure";
-        }
-        if (!values.message) {
-          errors.message = "Message failure";
-        }
-        return errors;
-      }}
-    >
-      {() => (
-        <Form
-          className={className}
-          method="POST"
-          name="contact-demo"
-          data-netlify="true"
-        >
-          <label htmlFor="name">1. Please let know who are you</label>
-          <Field name="name" />
-          <ErrorMessage name="name" />
-          <label htmlFor="email">2. Contact email or phone</label>
-          <Field name="email" />
-          <ErrorMessage name="email" />
-          <label htmlFor="message">3. Your message of interest...</label>
-          <Field name="message" component="textarea" />
-          <ErrorMessage name="message" />
-          <br />
-          <br />
-          <button type="submit">{"send!"}</button>
-        </Form>
-      )}
-    </Formik>
+    <Wrap>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="email"
+          name="from"
+          value={emailData.from}
+          onChange={handleChange}
+          placeholder="Recipient email"
+          className={errorFields.from ? "error" : ""}
+          required
+        />
+        <input
+          type="text"
+          name="subject"
+          value={emailData.subject}
+          onChange={handleChange}
+          placeholder="Subject"
+          className={errorFields.subject ? "error" : ""}
+          required
+        />
+        <textarea
+          name="message"
+          value={emailData.message}
+          onChange={handleChange}
+          placeholder="Message"
+          className={errorFields.message ? "error" : ""}
+          required
+        />
+        <button type="submit" className={loading ? "loading" : ""}>
+          {loading ? "Loading" : "Send Email"}
+        </button>
+      </form>
+    </Wrap>
   );
 };
 
-const wrappedForm = () => <Wrap>{form("lol")}</Wrap>;
-export default wrappedForm;
+export default EmailForm;
