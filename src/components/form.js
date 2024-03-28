@@ -21,9 +21,7 @@ const Wrap = styled.div`
     font-size: 1em;
     font-weight: bold;
   }
-  button.loading {
-    cursor: not-allowed; /* Prevent clicking when loading */
-  }
+
   button.loading:after {
     content: "";
     position: absolute;
