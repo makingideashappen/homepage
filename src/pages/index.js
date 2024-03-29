@@ -82,7 +82,12 @@ const IndexPage = () => {
                     padding: "6px 0",
                   }}
                 >
-                  <a className={styles.listItemLink} href={`${link.url}`}>
+                  <a
+                    className={styles.listItemLink}
+                    rel="noopener"
+                    target="_blank"
+                    href={`${link.url}`}
+                  >
                     {link.text} ↑
                   </a>
                 </span>
