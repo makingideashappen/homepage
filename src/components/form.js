@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import axios from "axios";
 import { navigate } from "gatsby";
+import { Button } from "./shared/button";
 
 const Wrap = styled.div`
   form {
@@ -11,16 +12,16 @@ const Wrap = styled.div`
   label {
     margin: 12px 0;
   }
-  button {
-    position: relative; /* Position relative for absolute positioning of loader */
-    width: 120px;
-    height: 48px;
-    background: rgba(0, 0, 0, 0.95);
-    padding: 6px 0px;
-    color: rgb(248, 248, 248);
-    font-size: 1em;
-    font-weight: bold;
-  }
+  // button {
+  //   position: relative; /* Position relative for absolute positioning of loader */
+  //   width: 120px;
+  //   height: 48px;
+  //   background: rgba(0, 0, 0, 0.95);
+  //   padding: 6px 0px;
+  //   color: rgb(248, 248, 248);
+  //   font-size: 1em;
+  //   font-weight: bold;
+  // }
 
   button.loading:after {
     content: "";
@@ -37,7 +38,7 @@ const Wrap = styled.div`
   }
   @keyframes spin {
     100% {
-      transform: rotate(360deg);
+      transform: rotate(3 deg);
     }
   }
   textarea,
@@ -57,7 +58,7 @@ const Wrap = styled.div`
   }
 `;
 
-const EmailForm = () => {
+const EmailForm = (hash) => {
   const [emailData, setEmailData] = useState({
     from: "",
     subject: "",
@@ -65,7 +66,7 @@ const EmailForm = () => {
   });
   const [errorFields, setErrorFields] = useState({});
   const [loading, setLoading] = useState(false); // State to track loading
-
+  console.log(hash);
   const handleChange = (e) => {
     setEmailData({ ...emailData, [e.target.name]: e.target.value });
     setErrorFields({ ...errorFields, [e.target.name]: false }); // Clear error when user starts typing
@@ -102,6 +103,16 @@ const EmailForm = () => {
     }
   };
 
+  useEffect(() => {
+    if (hash.hash === "research") {
+      setEmailData({
+        from: "",
+        subject: "Ask for research: Research proposal",
+        message: "",
+      });
+    }
+  }, [hash]);
+
   return (
     <Wrap>
       <form onSubmit={handleSubmit}>
@@ -131,9 +142,9 @@ const EmailForm = () => {
           className={errorFields.message ? "error" : ""}
           required
         />
-        <button type="submit" className={loading ? "loading" : ""}>
+        <Button type="submit" className={loading ? "loading" : ""}>
           {loading ? "Loading" : "Send Email"}
-        </button>
+        </Button>
       </form>
     </Wrap>
   );

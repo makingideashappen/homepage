@@ -30,10 +30,14 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({
       <p>The preferable frontend stack consist of newest and flexible solutions that are optimized to highest standards:</p>
       <h3>Affinity</h3>
       <p>Award-winning photo editing, graphic design and page layout software for Mac, Windows & iPad.</p>
-      <h3>React & Gatsby</h3>
+      <h3>React & Gatsby </h3>
       <p>Enables developers to build fast, secure, and powerful websites using a React-based framework and innovative data layer that makes integrating different content, APIs, and services into one web experience incredibly simple.</p>
+      <h3>Sanity CMS</h3>
+      <p>CMS of choice, powerful tool to make a serveless backend.</p>
       <h3>Node.js & Typescript</h3>
       <p>Node.js® is an open-source, cross-platform JavaScript runtime environment.</p>
+      <h3>Python and Django backend</h3>
+      <p>Django backend is a top choice for apps and can also be used as a powerful CMS.</p>
       <h3>Netlify & AWS</h3>
       <p>All your tools. All your data. Together. With first-class support for every modern web framework and a broad ecosystem of API integrationsAll your tools. All your data. Together. With first-class support for every modern web framework and a broad ecosystem of API integrations</p>
       <h3>For more costume preferences technical details need to be provided so that outcome satisfy any needs.</h3>

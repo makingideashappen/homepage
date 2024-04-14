@@ -10,6 +10,7 @@ import Contact from "../components/contact";
 import { Portfolio } from "../components/portfolio";
 import Footer from "../components/footer";
 import Man from "../images/man.svg";
+import MarketingSlogan from "../components/MarketingSlogan";
 
 const links = [
   {
@@ -58,7 +59,8 @@ const IndexPage = () => {
         </div>
         <div className={styles.info}>
           <h1>
-            Welcome to <b>Making Ideas Happen</b>
+            Welcome to <br />
+            <b>Making Ideas Happen</b>
           </h1>
           <p className={styles.intro}>
             <b>Content: </b>
@@ -97,14 +99,12 @@ const IndexPage = () => {
           </ul>
         </div>
       </div>
-
       {/* {moreLinks.map((link, i) => (
       <React.Fragment key={link.url}>
         <a href={`${link.url}${utmParameters}`}>{link.text}</a>
         {i !== moreLinks.length - 1 && <> · </>}
       </React.Fragment>
     ))} */}
-
       <Process />
       <Benefits />
       <Contact />
@@ -112,11 +112,11 @@ const IndexPage = () => {
         <b>Read more ↑</b>
       </a>
       <br />
-      <br />
-      <br />
       <a href={`/portfolio`}>
         <Portfolio />
       </a>
+      <MarketingSlogan /> <br />
+      <br />
       <center>
         <code>More intersting updates soon</code>
       </center>

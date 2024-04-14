@@ -5,22 +5,9 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 import Profile2 from "../images/profile2.jpg";
 import styled from "styled-components";
+import Timeline from "../components/shared/timeline";
 
 const Wrapper = styled.div`
-  // display:flex;
-  // article{
-  // max-width:50%;
-  // margin-right:20px;
-  // }
-  // .images{
-  //   align-items:flex-end;
-  // display:flex;
-  // justify-content:center;
-  // flex-direction:column;
-  // .profilePic1{
-  // }
-  // .profilePic2{
-  // }
   h3 {
     text-transform: uppercase;
     font-weight: bolder;
@@ -43,7 +30,69 @@ const Wrapper = styled.div`
     shape-margin: 1rem;
     margin-left: -15px;
   }
+  @media (max-width: 800px) {
+    display: block;
+    .content {
+      width: auto;
+    }
+    .avatar {
+      float: left;
+      width: 35vw;
+    }
+  }
 `;
+const items = [
+  {
+    company: "Freelancer",
+    time: "2022 - present",
+    description:
+      "Currently working freelance making websites nad reserching new technology!",
+    float: "right", // or 'left' for alternating sides
+    backgroundColor: "rgb(248,248,248)",
+    flagColor: "rgb(255,80,80)",
+    timeColor: "rgb(250,80,80)",
+  },
+  {
+    company: "Allbright.io",
+    time: "2021 - 2022",
+    description:
+      "Working on several projects including : Captio.io (P2P video chats with subtitles) , Medrefer (hospital scheduling app) and landing pages done in Gatsby.",
+    float: "left", // or 'right' for alternating sides
+    backgroundColor: "rgb(248,248,248)",
+    flagColor: "rgb(255,80,80)",
+    timeColor: "rgb(250,80,80)",
+  },
+  {
+    company: "Freelance",
+    time: "2008 - 2011",
+    description:
+      "Updating technology stack. Cooperating with local developers community. Working with a startup Hash-back empowering crypto culture.",
+    float: "right", // or 'left' for alternating sides
+    backgroundColor: "rgb(248,248,248)",
+    flagColor: "rgb(255,80,80)",
+    timeColor: "rgb(250,80,80)",
+  },
+  {
+    company: "Inwedo",
+    time: "2019",
+    description:
+      "My first employer where was working with Angular and C# backend softwware. Was responsible for frontend maintainance and development including HelloHere app (airbnb extension) and other app for housing market",
+    float: "left", // or 'right' for alternating sides
+    backgroundColor: "rgb(248,248,248)",
+    flagColor: "rgb(255,80,80)",
+    timeColor: "rgb(250,80,80)",
+  },
+  {
+    company: "Technical University of Lodz",
+    time: "2008 - 2011",
+    description:
+      "Obtainnig master of engeenering doble diploma both in polish and english. Studying in Poland and Spain.",
+    float: "right", // or 'left' for alternating sides
+    backgroundColor: "rgb(248,248,248)",
+    flagColor: "rgb(255,80,80)",
+    timeColor: "rgb(250,80,80)",
+  },
+];
 
 const SecondPage = () => {
   return (
@@ -64,6 +113,13 @@ const SecondPage = () => {
           <p>
             Before that was working on several professional projects. The main
             purpose of this webpage is to find a potential partner or employer.
+          </p>
+        </div>
+        <Timeline items={items} />
+        <div class="content">
+          <p>
+            In future wish to expand my knowledge and open stable business that
+            will last for many years .
           </p>
         </div>
       </Wrapper>

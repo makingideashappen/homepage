@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { Intro } from '../components/intro'
 import Form from "../components/form"
+import { useLocation } from "@reach/router";
 
 type DataProps = {
   site: {
@@ -18,7 +19,8 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({
 }) => (
   <Layout>
     <Intro />
-    <Form />
+    <Form hash={  location.hash.substring(1)
+}/>
     <br /><br />
     <Link to="/"> ← Return</Link>
   </Layout>
