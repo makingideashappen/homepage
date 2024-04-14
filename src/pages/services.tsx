@@ -36,7 +36,7 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({
       <p>CMS of choice, powerful tool to make a serveless backend.</p>
       <h3>Node.js & Typescript</h3>
       <p>Node.js® is an open-source, cross-platform JavaScript runtime environment.</p>
-      <h3>Python and Django backend</h3>
+      <h3>Python & Django backend</h3>
       <p>Django backend is a top choice for apps and can also be used as a powerful CMS.</p>
       <h3>Netlify & AWS</h3>
       <p>All your tools. All your data. Together. With first-class support for every modern web framework and a broad ecosystem of API integrationsAll your tools. All your data. Together. With first-class support for every modern web framework and a broad ecosystem of API integrations</p>

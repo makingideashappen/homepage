@@ -11,7 +11,6 @@ import { Portfolio } from "../components/portfolio";
 import Footer from "../components/footer";
 import Man from "../images/man.svg";
 import MarketingSlogan from "../components/MarketingSlogan";
-
 const links = [
   {
     text: "LinkedIn update",
