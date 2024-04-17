@@ -119,10 +119,7 @@ const SecondPage = () => {
         <br />
         <Timeline items={items} />
         <div class="content">
-          <code>
-            In future wish to expand my knowledge and open stable business that
-            will last for many years .
-          </code>
+          <code>Always looking for interesting oportunities!</code>
         </div>
       </Wrapper>
       <br /> <br />
