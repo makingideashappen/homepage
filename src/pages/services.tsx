@@ -31,7 +31,7 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({
     <p>
       <h2><code>Webdevelopment Stack:</code></h2>
       <p>The preferable frontend stack consist of newest and flexible solutions that are optimized to highest standards:</p>
-      <h3>Affinity</h3>
+      <h3>Affinity, Canva and AI graphic tools</h3>
       <p>Award-winning photo editing, graphic design and page layout software for Mac, Windows & iPad.</p>
       <h3>React & Gatsby </h3>
       <p>Enables developers to build fast, secure, and powerful websites using a React-based framework and innovative data layer that makes integrating different content, APIs, and services into one web experience incredibly simple.</p>
