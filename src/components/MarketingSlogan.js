@@ -45,7 +45,7 @@ const Blob = ({ className }) => {
     <>
       <Hero>
         <h2>Make imposible - posible</h2>
-        <p>By adding experinced frontend researcher to your team</p>
+        <p>By adding experinced researcher to your team</p>
         <Button>
           <a href="/contact/#research" rel="noopener noreferrer">
             {/* SVG code */}

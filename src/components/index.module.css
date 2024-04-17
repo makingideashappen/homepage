@@ -40,8 +40,8 @@
   text-decoration: none;
 }
 
-.listItemLink:hover{
-color: var(--color-code-bg);
+.listItemLink:hover {
+  color: var(--color-code-bg);
 }
 
 .listItemDescription {
@@ -55,7 +55,7 @@ color: var(--color-code-bg);
   line-height: var(--line-height-loose);
 }
 
-.hero{
+.hero {
   display: flex;
   @media (max-width: 800px) {
     flex-direction: column;
@@ -63,10 +63,9 @@ color: var(--color-code-bg);
 }
 
 .decoration {
-margin:0 2vw;
-order: 1;
+  margin: 0 6vw;
+  order: 1;
 }
 
 .info {
-
 }

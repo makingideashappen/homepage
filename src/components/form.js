@@ -142,6 +142,7 @@ const EmailForm = (hash) => {
           className={errorFields.message ? "error" : ""}
           required
         />
+        <br />
         <Button type="submit" className={loading ? "loading" : ""}>
           {loading ? "Loading" : "Send Email"}
         </Button>

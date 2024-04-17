@@ -98,7 +98,7 @@ const SecondPage = () => {
   return (
     <Layout>
       <h1>About</h1>
-      <h2>A few words about author</h2>
+      <h2>A few words about author...</h2>
       <Wrapper>
         <div class="content">
           <img className="avatar" src={Profile2} alt="Avatar" />
@@ -115,12 +115,14 @@ const SecondPage = () => {
             purpose of this webpage is to find a potential partner or employer.
           </p>
         </div>
+        <br />
+        <br />
         <Timeline items={items} />
         <div class="content">
-          <p>
+          <code>
             In future wish to expand my knowledge and open stable business that
             will last for many years .
-          </p>
+          </code>
         </div>
       </Wrapper>
       <br /> <br />

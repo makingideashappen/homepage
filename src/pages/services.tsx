@@ -6,6 +6,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { Intro } from '../components/intro'
 import Ishikawa from  "../images/ishikawa.png"
+import MarketingSlogan from "../components/MarketingSlogan";
 
 type DataProps = {
   site: {
@@ -18,7 +19,9 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({
   location,
 }) => (
   <Layout>
-    <Intro />
+      <Intro >  Everything begins with an idea.
+              <br />
+              Make it happen with beautiful website.</Intro>
     <Benefits />
     <Process />
     <br /><br />
@@ -65,7 +68,9 @@ Problem to solution approach
     <br></br>
     <img style={{maxWidth:400}}  src={Ishikawa} />
   <p><code>Pic 1. Ishikawa diagram</code></p> 
-  
+  <MarketingSlogan /> 
+<br/><br/><br/><br/>
+
 
     <Link to="/"> ← Return</Link>
   </Layout>

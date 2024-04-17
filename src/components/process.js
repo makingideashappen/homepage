@@ -8,27 +8,26 @@ export function Process() {
         <h2>Process</h2>
       </Row>
       <div className="desktop">
-        <Row >
+        <Row>
           <Column s={20}>
-            <p>1. Describe →
-            </p>
+            <p>1. Describe 💡</p>
           </Column>
           <Column s={20}>
-            <p>2. Design →</p>
+            <p>2. Design 📐</p>
           </Column>
           <Column s={20}>
-            <p>3. Build →</p>
+            <p>3. Build 💻</p>
           </Column>
           <Column s={20}>
-            <p>4. Publish →</p>
+            <p>4. Publish 📢</p>
           </Column>
           <Column s={20}>
-            <p>5. Feedback ↴</p>
+            <p>5. Feedback 💬</p>
           </Column>
         </Row>
       </div>
-      <div className="mobile" >
-        <Row >
+      <div className="mobile">
+        <Row>
           <ol>
             <li>Describe</li>
             <li>Design</li>
@@ -37,10 +36,9 @@ export function Process() {
             <li>Feedback</li>
           </ol>
         </Row>
-        <Row>
-        </Row>
-      </div>   
-       </Wrap>
+        <Row></Row>
+      </div>
+    </Wrap>
   );
 }
 
@@ -50,20 +48,20 @@ const Row = styled.div`
 `;
 
 const Wrap = styled.div`
-.desktop{
-  @media (max-width: 800px) {
-    display:none;
-  }  
-}
-  .mobile{
+  .desktop {
+    @media (max-width: 800px) {
+      display: none;
+    }
+  }
+  .mobile {
     @media (min-width: 800px) {
-      display:none;
-    }  
+      display: none;
+    }
   }
   ol {
-    font-weight:bold;
+    font-weight: bold;
   }
-  `
+`;
 
 const Column = styled.div`
   border: 2px solid black;
@@ -75,8 +73,5 @@ const Column = styled.div`
   margin: 10px;
   display: flex;
   min-height: 100px;
-  width: ${props => (props.s ? props.s + "%" : "100%")};
+  width: ${(props) => (props.s ? props.s + "%" : "100%")};
 `;
-
-
-

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link } from "gatsby";
+import { PageProps, Link, graphql, HeadFC } from "gatsby"
 
 import Layout from "../components/layout";
 import Seo from "../components/seo";
@@ -10,7 +10,8 @@ import Contact from "../components/contact";
 import { Portfolio } from "../components/portfolio";
 import Footer from "../components/footer";
 import Man from "../images/man.svg";
-import MarketingSlogan from "../components/MarketingSlogan";
+import Form from "../components/form"
+
 const links = [
   {
     text: "LinkedIn update",
@@ -46,15 +47,23 @@ const samplePageLinks = [
   { text: "Services", url: "services" },
   { text: "Portfolio", url: "portfolio" },
   // { text: "Blog", url: "blog" },
-  { text: "Inquiry", url: "contact" },
+  // { text: "Inquiry", url: "contact" },
 ];
 
-const IndexPage = () => {
-  return (
-    <Layout>
+type DataProps = {
+  site: {
+    buildTime: string
+  }
+}
+
+const IndexPage: React.FC<PageProps<DataProps>> = ({
+  data,
+  location,
+}) => (
+      <Layout>
       <div className={styles.hero}>
         <div className={styles.decoration}>
-          <img width="200" alt="man" src={Man} />
+          <img width="200" alt="man" src={Man}  />
         </div>
         <div className={styles.info}>
           <h1>
@@ -114,15 +123,17 @@ const IndexPage = () => {
       <a href={`/portfolio`}>
         <Portfolio />
       </a>
-      <MarketingSlogan /> <br />
       <br />
+     
       <center>
-        <code>More intersting updates soon</code>
       </center>
-      <Footer />
+      <Form hash={  location.hash.substring(1)}/>
+      <br />
+      <code>Ask and I will be happy to answear! 📧🚀💪</code>
+       <Footer />
     </Layout>
   );
-};
+ 
 
 export const Head = () => <Seo title="Home" />;
 

@@ -5,7 +5,7 @@ import styled from "styled-components";
 // import Letters from "../../images/letters.svg";
 import Logo from "../images/logo.svg";
 
-export function Intro() {
+export function Intro({ children }) {
   return (
     <Wrapper style={{ display: "flex" }}>
       <Row>
@@ -22,9 +22,7 @@ export function Intro() {
                 padding: "6px 0",
               }}
             >
-              Everything begins with an idea.
-              <br />
-              Make it happen with beautiful website.
+              {children}
             </span>
           </h1>
         </Column>
