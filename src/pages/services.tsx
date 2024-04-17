@@ -19,9 +19,11 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({
   location,
 }) => (
   <Layout>
-      <Intro >  Everything begins with an idea.
+      <Intro > 
+         Everything begins with an idea.
               <br />
-              Make it happen with beautiful website.</Intro>
+    Make it happen with beautiful website.
+    </Intro>
     <Benefits />
     <Process />
     <br /><br />

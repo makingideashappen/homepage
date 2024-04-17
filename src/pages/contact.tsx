@@ -20,7 +20,7 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({
   <Layout>
     <Intro >  What is in your area of interest?
               <br />
-              Make it happen with a deep knowledge of the subject.</Intro>
+              Make it happen with a deep <br/>knowledge of the subject.</Intro>
               <p>
         Please describe the topic and how would the result outcome of research are preferable.
           </p>
