@@ -67,7 +67,7 @@ Problem to solution approach
 </ul>
     <br></br>
     <img style={{maxWidth:400}}  src={Ishikawa} />
-  <p><code>Pic 1. Ishikawa diagram</code></p> 
+  <p><code>Pic 1. Ishikawa diagram is one of the tools used in research</code></p> 
   <MarketingSlogan /> 
 <br/><br/><br/><br/>
 
