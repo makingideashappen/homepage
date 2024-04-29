@@ -5,7 +5,6 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { Intro } from '../components/intro'
 import Form from "../components/form"
-import { useLocation } from "@reach/router";
 
 type DataProps = {
   site: {
@@ -18,17 +17,14 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({
   location,
 }) => (
   <Layout>
-    <Intro >  What is in your area of interest?
-              <br />
-              Make it happen with a deep <br/>knowledge of the subject.</Intro>
-              <p>
-        Please describe the topic and how would the result outcome of research are preferable.
-          </p>
-          <code>Will reach you as soon as posible 📧🚀💪</code>
+    <Intro > 
+            What is in your area of interest?<br/>
+            Make it happen with a deep <br/>
+            knowledge of the subject.</Intro>
+            <p>Please describe the topic and how would the result outcome of research are preferable.</p>
+            <code>Will reach you as soon as posible 📧🚀💪</code>
           <br/><br/>
-    <Form hash={  location.hash.substring(1)
-}/>
-    <br /><br />
+    <Form hash={  location.hash.substring(1)}/><br /><br />
     <Link to="/"> ← Return</Link>
   </Layout>
 )

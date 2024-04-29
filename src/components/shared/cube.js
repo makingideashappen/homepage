@@ -41,7 +41,6 @@ const Face = styled.div`
   transform: rotate3d(var(--i), var(--j), 0, var(--a))
     translateZ(0.5 * ${cubeEdge});
   background: linear-gradient(var(--ga), var(--gs));
-
   &:nth-child(n + 5) {
     --i: 1;
     --j: 0;

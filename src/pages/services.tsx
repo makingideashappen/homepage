@@ -78,7 +78,7 @@ Problem to solution approach
   </Layout>
 )
 
-export const Head: HeadFC<DataProps> = () => <Seo title="Using TypeScript" />
+export const Head: HeadFC<DataProps> = () => <Seo title="At your serveice" />
 
 export default UsingTypescript
 
