@@ -28,7 +28,6 @@ export function Portfolio() {
             }}
           >
             <span style={{ textDecoration: "underline" }}>
-              {" "}
               Recent projects{" "}
             </span>
           </h2>

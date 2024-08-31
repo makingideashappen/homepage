@@ -114,6 +114,12 @@ const SecondPage = () => {
             Before that was working on several professional projects. The main
             purpose of this webpage is to find a potential partner or employer.
           </p>
+          <p>
+            Recent years also have I worked as a human rights propagator and
+            activist. Non profit actions and happenings for spread knowledge and
+            build consience about this particular subject is a value I wisish to
+            share.
+          </p>
         </div>
         <br />
         <br />

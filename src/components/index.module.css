@@ -65,7 +65,29 @@
 .decoration {
   margin: 0 6vw;
   order: 1;
+  position: relative;
 }
 
 .info {
+}
+
+.shape1 {
+  position: absolute;
+  bottom: 190px;
+  left: 180px;
+}
+
+.shape2 {
+  position: absolute;
+  top: calc(50vw);
+  bottom: 0;
+  left: -30px;
+  rotate: 0deg;
+}
+
+.shape3 {
+  position: absolute;
+  bottom: 0;
+  left: 190px;
+  rotate: -120deg;
 }
