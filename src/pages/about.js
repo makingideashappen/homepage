@@ -76,7 +76,7 @@ const items = [
     company: "Inwedo",
     time: "2019",
     description:
-      "My first employer where was working with Angular and C# backend software. Was responsible for frontend maintainance and development including HelloHere app (airbnb extension) and other app for housing market",
+      "My first employer where was working with Angular and C# backend software. Was responsible for frontend maintainance and development including HelloHere app (airbnb extension) and other app for housing market.",
     float: "left", // or 'right' for alternating sides
     backgroundColor: "rgb(248,248,248)",
     flagColor: "rgb(255,80,80)",
