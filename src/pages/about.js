@@ -46,7 +46,7 @@ const items = [
     company: "Freelancer",
     time: "2022 - present",
     description:
-      "Currently working freelance making websites nad reserching new technology!",
+      "Currently working freelance making websites and reserching new technology!",
     float: "right", // or 'left' for alternating sides
     backgroundColor: "rgb(248,248,248)",
     flagColor: "rgb(255,80,80)",
