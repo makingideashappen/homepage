@@ -116,8 +116,8 @@ const SecondPage = () => {
           </p>
           <p>
             Recent years also have I worked as a human rights propagator and
-            activist. Non profit actions and happenings for spread knowledge and
-            build consience about this particular subject is a value I wisish to
+            activist. Non profit actions. Happenings for spread knowledge and
+            build consience about this particular subject is a value I wish to
             share.
           </p>
         </div>
