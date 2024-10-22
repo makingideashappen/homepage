@@ -11,7 +11,7 @@ import { Portfolio } from "../components/portfolio";
 import Footer from "../components/footer";
 // import Shape1 from "../images/Vector1.svg";
 // import Shape2 from "../images/Vector4.svg";
-
+import Clock from "../components/clockAlt";
 import Man from "../images/man.svg";
 
 import Form from "../components/form";
@@ -73,7 +73,6 @@ const IndexPage: React.FC<PageProps<DataProps>> = ({ data, location }) => (
           <b>Making Ideas Happen</b>
         </h1>
         <p className={styles.intro}>
-          <b>Content: </b>
           {samplePageLinks.map((link, i) => (
             <React.Fragment key={link.url}>
               <Link style={{ fontSize: "1.2rem" }} to={link.url}>

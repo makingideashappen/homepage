@@ -67,6 +67,7 @@ const EmailForm = (hash) => {
   const [errorFields, setErrorFields] = useState({});
   const [loading, setLoading] = useState(false); // State to track loading
   console.log(hash);
+
   const handleChange = (e) => {
     setEmailData({ ...emailData, [e.target.name]: e.target.value });
     setErrorFields({ ...errorFields, [e.target.name]: false }); // Clear error when user starts typing
@@ -75,19 +76,24 @@ const EmailForm = (hash) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const errors = {};
+
     if (!emailData.from) {
       errors.from = true;
     }
+
     if (!emailData.subject) {
       errors.subject = true;
     }
+
     if (!emailData.message) {
       errors.message = true;
     }
+
     if (Object.keys(errors).length > 0) {
       setErrorFields(errors);
       return; // Don't submit form if there are errors
     }
+
     try {
       setLoading(true); // Start loading
       await axios.post(
@@ -108,6 +114,13 @@ const EmailForm = (hash) => {
       setEmailData({
         from: "",
         subject: "Ask for research: Research proposal",
+        message: "",
+      });
+    }
+    if (hash.hash === "project") {
+      setEmailData({
+        from: "",
+        subject: "Project request",
         message: "",
       });
     }
