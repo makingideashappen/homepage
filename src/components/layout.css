@@ -32,6 +32,9 @@ html {
   font-size: var(--font-md);
   line-height: var(--line-height-normal);
   overflow-y: scroll;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 body {
   -moz-osx-font-smoothing: grayscale;

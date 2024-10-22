@@ -21,7 +21,6 @@ const PortfolioItemWrapper = styled.a`
   transition: transform 0.2s;
   padding: 15px;
   text-decoration: none;
-  color: inherit; // Prevent link from having any color changes
   cursor: pointer;
   color: black;
   // Responsive for mobile: Stack the image and text vertically
