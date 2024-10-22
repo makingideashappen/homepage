@@ -8,6 +8,18 @@ const NotFoundPage = () => (
   <Layout>
     <h1>Private Brands</h1>
     <code>Other businesses in develop</code>
+    <h2>Human Cause</h2>
+    <p>Human rights activism social media and dedicated platform</p>
+    <p>
+      <a href={`https://www.instagram.com/human_cause/`}>Instagram</a>
+    </p>
+    <p>
+      <a href={`https://x.com/HumanCauseX`}>X platform</a>
+    </p>
+    <p>
+      <code>Planned relase of webpage araund 01.11.2024 </code>
+    </p>
+    <p>Human rights activism social media and webpage soon relase</p>
     <h2>Place 2024</h2>
     <p>White label marketplace for creators (React , Django)</p>
     <p>
