@@ -86,7 +86,7 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({
     <ul>
       <li>Research for marketing purpouse</li>
       <li>Problem to solution approach</li>
-      <li>Counter thesis nresearch</li>
+      <li>Counter thesis research</li>
       <li>Web research on popular engines and networks</li>
       <li>Observations and historical research in books or pieces</li>
       <li>Surveys and people research</li>
