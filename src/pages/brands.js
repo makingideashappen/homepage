@@ -25,7 +25,7 @@ const NotFoundPage = () => (
     <p>
       <code>In progress</code>
     </p>
-    <h2>Voodpecker eyewear</h2>
+    <h2>Voodpecker eyewear </h2>
     <p>
       Eco fashion brand established in 2014, currently waiting for more suitable
       times or business partnership for reactivation.
@@ -33,17 +33,18 @@ const NotFoundPage = () => (
     <p>
       <a href={`https://www.facebook.com/Voodpecker.eyewear`}>facebook page</a>
     </p>
-    <p>Instagram: @voodpecker_apparel</p>
+    <a href={`https://www.instagram.com/voodpecker_apparel/`}>Instagram</a>
     <h2>Love peace med</h2>
     <p>Nishe natural nutrition for well-being. CBD tea concept tea.</p>
     <p>
       <a href={`https://www.facebook.com/profile.php?id=100091845867824`}>
-        {" "}
         facebook page
       </a>
     </p>
-    <p>Instagram: @Lovepeacemed</p>
-    <Link to="/"> ← Return</Link>
+    <a href={`https://www.instagram.com/Lovepeacemed/`}>Instagram</a>
+    <p>
+      <Link to="/"> ← Return</Link>
+    </p>
   </Layout>
 );
 
