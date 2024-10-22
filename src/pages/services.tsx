@@ -94,7 +94,7 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({
       <li>People based reserch and social media</li>
       <li>Pata analytics, large data model research</li>
       <li>LLM research</li>
-      <li>Gemoetrical researchh</li>
+      <li>Gemoetrical research</li>
     </ul>
     <br></br>
     <img style={{ maxWidth: 400 }} src={Ishikawa} />
